@@ -49,8 +49,7 @@ public class SpawnPointController : MonoBehaviour
 		transform.Rotate(Vector3.forward, Time.deltaTime * 60.0f);
 
 		// create an agent?
-		if(Input.GetKeyDown(KeyCode.Space) == true)
-		{
+		if(Input.GetButtonDown("Jump")){
 			// we just request an agent whether one is available or not
 			AgentController.Spawn(transform.position, transform.eulerAngles);
 		}

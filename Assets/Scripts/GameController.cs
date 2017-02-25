@@ -44,9 +44,11 @@ public class GameController : MonoBehaviour
 	
 	protected void Update()
 	{
-		if(Input.GetMouseButtonDown(0) == true)
-		{
+		if(Input.GetButtonDown("Fire1")){
 			MainController.SwitchScene("Menu Scene");
+		}
+		if(Input.GetButtonDown("Cancel")){
+			Application.Quit ();
 		}
 	}
 
