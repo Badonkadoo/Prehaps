@@ -10,7 +10,7 @@ using System.Collections;
 public class GameController : MonoBehaviour
 {
 	private static GameController gameController;
-
+	private GameObject[] agents;
 	//--------------------------------------------------------------------------
 	// public static methods
 	//--------------------------------------------------------------------------
@@ -44,12 +44,23 @@ public class GameController : MonoBehaviour
 	
 	protected void Update()
 	{
-		if(Input.GetButtonDown("Fire1")){
+		if(Input.GetButtonDown("Fire2")){
 			MainController.SwitchScene("Menu Scene");
 		}
 		if(Input.GetButtonDown("Cancel")){
 			Application.Quit ();
 		}
+	}
+
+	public void ResetLevel(){
+		agents = GameObject.FindGameObjectsWithTag ("Agent");
+		for(int i = 0; i < agents.Length; i++){
+			agents[i].SetActive (false);
+		}
+	}
+
+	public void ResetScene(){
+		
 	}
 
 	//--------------------------------------------------------------------------

@@ -76,16 +76,19 @@ public class AgentController : MonoBehaviour
 	
 	protected void OnEnable()
 	{
+		Vector2 spawnDirection = new Vector2 (transform.up.x, transform.up.y);
+		GetComponent<Rigidbody2D> ().AddForce (spawnDirection * power * Time.deltaTime, ForceMode2D.Impulse);
 	}
 	
 	protected void Start()
 	{
 		gameObject.SetActive(false);
+
 	}
 	
 	protected void Update()
 	{
-		GetComponent<Rigidbody2D> ().AddForce (Vector2.up * power * Time.deltaTime, ForceMode2D.Impulse);
+		
 	}
 
 	protected void OnBecameInvisible()

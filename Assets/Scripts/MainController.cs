@@ -28,11 +28,14 @@ public class MainController : MonoBehaviour
 	{
 		if(mainController != null)
 		{
-			if( mainController.currentSceneName != nextSceneName )
-			{
+			if (mainController.currentSceneName != nextSceneName) {
 				mainController.nextSceneName = nextSceneName;
 			}
 		}
+	}
+
+	public void ResetScene(){
+		sceneState = SceneState.Reset;
 	}
 
 	//--------------------------------------------------------------------------
