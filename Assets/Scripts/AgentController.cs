@@ -13,6 +13,7 @@ public class AgentController : MonoBehaviour
 	// singleton list to hold all our projectiles
 	static private List<AgentController> agentControllers;
 
+	public float power;
 	//--------------------------------------------------------------------------
 	// static public methods
 	//--------------------------------------------------------------------------
@@ -84,8 +85,7 @@ public class AgentController : MonoBehaviour
 	
 	protected void Update()
 	{
-		// travel in a straight line at 4 units per second
-		transform.position += transform.up * (Time.deltaTime * 4);
+		GetComponent<Rigidbody2D> ().AddForce (Vector2.up * power * Time.deltaTime, ForceMode2D.Impulse);
 	}
 
 	protected void OnBecameInvisible()
