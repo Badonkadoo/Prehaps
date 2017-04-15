@@ -7,11 +7,13 @@ public class Resettable : MonoBehaviour {
 
 	Vector2 startPosition;
 	Quaternion startRotation;
+	bool active;
 
 	// Use this for initialization
 	void Start () {
 		startPosition = transform.position;
 		startRotation = transform.rotation;
+		active = gameObject.activeSelf;
 	}
 	
 	// Update is called once per frame
@@ -25,5 +27,6 @@ public class Resettable : MonoBehaviour {
 		gameObject.GetComponent<Rigidbody2D> ().angularVelocity = 0.0f;
 		transform.position = startPosition;
 		transform.rotation = startRotation;
+		gameObject.SetActive (active);
 	}
 }
