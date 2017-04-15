@@ -82,6 +82,7 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_WIN
 -define:UNITY_TEAM_LICENSE
+Assets/ButtonTrigger.cs
 Assets/Scripts/AgentController.cs
 Assets/Scripts/GameController.cs
 Assets/Scripts/MainController.cs
@@ -90,6 +91,7 @@ Assets/Scripts/Resettable.cs
 Assets/Scripts/Rotate.cs
 Assets/Scripts/SceneAutoLoader.cs
 Assets/Scripts/SpawnPointController.cs
+Assets/Scripts/agentDetected.cs
 -r:"D:\Applications\Unity 5.5.1f\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
 -r:"D:\Applications\Unity 5.5.1f\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
 -r:"D:\Applications\Unity 5.5.1f\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"

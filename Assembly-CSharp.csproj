@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AgentController.cs" />
+     <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MainController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\SceneAutoLoader.cs" />
      <Compile Include="Assets\Scripts\SpawnPointController.cs" />
+     <Compile Include="Assets\Scripts\agentDetected.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Applications/Unity 5.5.1f/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

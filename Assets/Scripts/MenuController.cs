@@ -11,6 +11,8 @@ public class MenuController : MonoBehaviour
 {
 	private static MenuController menuController;
 
+	public GameObject FirstMenu;
+
 	//--------------------------------------------------------------------------
 	// public static methods
 	//--------------------------------------------------------------------------
@@ -45,11 +47,15 @@ public class MenuController : MonoBehaviour
 	protected void Update()
 	{
 		if(Input.GetButtonDown("Fire1")){
-			MainController.SwitchScene("Game Scene");
+			MainController.SwitchScene("Level 4");
 		}
 		if(Input.GetButtonDown("Cancel")){
 			Application.Quit ();
 		}
+	}
+
+	public void startPressed(){
+		FirstMenu.transform.Translate (Vector3.up*2000);
 	}
 
 	//--------------------------------------------------------------------------

@@ -9,8 +9,13 @@ using System.Collections;
 //------------------------------------------------------------------------------
 public class GameController : MonoBehaviour
 {
+	public GameObject levelCompleteUI;
+	public GameObject objects;
+
 	private static GameController gameController;
 	private GameObject[] agents;
+	private int childCount;
+	public GameObject[] goals;
 	//--------------------------------------------------------------------------
 	// public static methods
 	//--------------------------------------------------------------------------
@@ -54,9 +59,14 @@ public class GameController : MonoBehaviour
 
 	public void ResetLevel(){
 		agents = GameObject.FindGameObjectsWithTag ("Agent");
-		for(int i = 0; i < agents.Length; i++){
-			agents[i].SetActive (false);
+		for(int k = 0; k < agents.Length; k++){
+			agents[k].SetActive (false);
 		}
+		objects.BroadcastMessage ("Reset");
+	}
+
+	public void GoalComplete (){
+		levelCompleteUI.SetActive (true);
 	}
 
 	public void ResetScene(){
