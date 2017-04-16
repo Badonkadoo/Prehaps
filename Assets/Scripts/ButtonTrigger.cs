@@ -15,9 +15,12 @@ public class ButtonTrigger : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		print ("hit");
 		if (collision.gameObject.tag == "Button") {
 			switchableObject.SetActive (false);
 		}
+	}
+	public void Reset()
+	{
+		switchableObject.SetActive (true);
 	}
 }
